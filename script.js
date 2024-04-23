@@ -35,9 +35,9 @@ async function ValidateForm() {
     // }
     
     try {
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const url = "https://reqres.in/api/login";
+        const email = document.getElementById("email").value
+        const password = document.getElementById("password").value
+        const url = "https://reqres.in/api/login"
 
         const info = {
             
@@ -59,14 +59,13 @@ async function ValidateForm() {
             alert('Invalid email or password')           
         }
         else{
-            alert('Login successful');
-            const data = await response.json();
-            console.log(data); // Handle successful response
+            alert('Login successful')
+            const data = await response.json()
+            console.log(data)
         }
              
     } catch (error) {
-        console.error('There has been a problem with your fetch operation:', error);
-        document.getElementById('errors').innerHTML = '<div class="error">' + error.message + '</div>';
+        console.error(error)
     }
 
     return false;
